@@ -68,65 +68,81 @@
 			<div class="printDesign block">
 				<img src="images/image07.jpg" class="portfolioImg"/>
 				<div class="cover">
-					<div class="portfolioSeparator"></div>
-					<h4>Some text</h4>
-					<p>mini description</p>
+					<div class="infoBlock">
+						<div class="portfolioSeparator"></div>
+						<h4>Some text</h4>
+						<p>mini description</p>
+					</div>
 				</div>
 			</div>
 			<div class="animation block">
 				<img src="images/image06.jpg" class="portfolioImg"/>
 				<div class="cover">
-					<div class="portfolioSeparator"></div>
-					<h4>T-shirt design</h4>
-					<p>art / t-shirt</p>
+					<div class="infoBlock">
+						<div class="portfolioSeparator"></div>
+						<h4>T-shirt design</h4>
+						<p>art / t-shirt</p>
+					</div>
 				</div>
 			</div>
 			<div class="art block">
 				<img src="images/image05.jpg" class="portfolioImg"/>
 				<div class="cover">
-					<div class="portfolioSeparator"></div>
-					<h4>Some text</h4>
-					<p>mini description</p>
+					<div class="infoBlock">
+						<div class="portfolioSeparator"></div>
+						<h4>Some text</h4>
+						<p>mini description</p>
+					</div>
 				</div>
 			</div>
 			<div class="webDesign block">
 				<img src="images/image04.jpg" class="portfolioImg"/>
 				<div class="cover">
-					<div class="portfolioSeparator"></div>
-					<h4>Some text</h4>
-					<p>mini description</p>
+					<div class="infoBlock">
+						<div class="portfolioSeparator"></div>
+						<h4>Some text</h4>
+						<p>mini description</p>
+					</div>
 				</div>
 			</div>
 			<div class="photography block">
 				<img src="images/image03.jpg" class="portfolioImg"/>
 				<div class="cover">
-					<div class="portfolioSeparator"></div>
-					<h4>Some text</h4>
-					<p>mini description</p>
+					<div class="infoBlock">
+						<div class="portfolioSeparator"></div>
+						<h4>Some text</h4>
+						<p>mini description</p>
+					</div>
 				</div>
 			</div>
 			<div class="video block">
 				<img src="images/image02.jpg" class="portfolioImg"/>
 				<div class="cover">
-					<div class="portfolioSeparator"></div>
-					<h4>Some text</h4>
-					<p>mini description</p>
+					<div class="infoBlock">
+						<div class="portfolioSeparator"></div>
+						<h4>Some text</h4>
+						<p>mini description</p>
+					</div>
 				</div>
 			</div>
 			<div class="webDesign block">
 				<img src="images/image01.jpg" class="portfolioImg"/>
 				<div class="cover">
-					<div class="portfolioSeparator"></div>
-					<h4>Some text</h4>
-					<p>mini description</p>
+					<div class="infoBlock">
+						<div class="portfolioSeparator"></div>
+						<h4>Some text</h4>
+						<p>mini description</p>
+					</div>
 				</div>
 			</div>
 			<div class="webDesign block">
 				<img src="images/image08.jpg" class="portfolioImg"/>
 				<div class="cover">
-					<div class="portfolioSeparator"></div>
-					<h4>Some text</h4>
-					<p>mini description</p>
+					<div class="infoBlock">
+						<div class="portfolioSeparator"></div>
+						<h4>Some text</h4>
+						<p>mini description</p>
+					</div>
 				</div>
 			</div>
 			
@@ -233,34 +249,35 @@
 <!-- Modal section -->
 <div class="overlay"></div>
 <div class="modal" id="ideaModal">
-	<form>
-   <label style="float:left;font-size:12px; text-align:left;">Телефон<span style="color:#e74c3c">*</span></label>
-   <br />
-   <input required placeholder="+38 0(XX) XXX-XX-XX"  id="phone" type="text" class="form-control" name="phone">
-	<input type="file" name="myFile" value="Файл">
-	 <label style="float:left;font-size:12px; text-align:left;">E-mail:</label><br />  <input type="email" name="email">
-	 <br />
-	  <input class="sendButton" type="submit" value="Отправить">
+	<form action="controller.php" method="post" id="ideaForm" enctype="multipart/form-data">
+    <label for="phone">Телефон<span style="color:#e74c3c">*</span></label><br />
+    <input required placeholder="+38 0(XX) XXX-XX-XX" name="phone" id="phone" type="text">
+	<input class="fileButton" type="button" id="loadFileXml" value="Файл" onclick="document.getElementById('file').click();" />
+	<input type="file" style="display:none;" id="file" name="file"/>
+	<label for="email">E-mail:</label><br />
+	<input type="email" name="email" id="email">
+	<br />
+	<input class="sendButton" type="submit" value="Отправить" id="submit">
 	</form>
 </div>
 <div class="modal" id="sleekModal">
 	<form>
-   <label style="float:left;font-size:12px; text-align:left;">Телефон2<span style="color:#e74c3c">*</span></label>
+   <label>Телефон2<span style="color:#e74c3c">*</span></label>
    <br />
    <input required placeholder="+38 0(XX) XXX-XX-XX"  id="phone" type="text" class="form-control" name="phone">
 	<input type="file" name="myFile" value="Файл">
-	 <label style="float:left;font-size:12px; text-align:left;">E-mail:</label><br />  <input type="email" name="email">
+	 <label>E-mail:</label><br />  <input type="email" name="email">
 	 <br />
 	 <input class="sendButton" type="submit" value="Отправить">
 	</form>
 </div>
 <div class="modal" id="codeModal">
 	<form>
-   <label style="float:left;font-size:12px; text-align:left;">Телефон3<span style="color:#e74c3c">*</span></label>
+   <label>Телефон3<span style="color:#e74c3c">*</span></label>
    <br />
    <input required placeholder="+38 0(XX) XXX-XX-XX"  id="phone" type="text" class="form-control" name="phone">
 	<input type="file" name="myFile" value="Файл">
-	 <label style="float:left;font-size:12px; text-align:left;">E-mail:</label><br />  <input type="email" name="email">
+	 <label>E-mail:</label><br />  <input type="email" name="email">
 	 <br />
 	  <input class="sendButton" type="submit" value="Отправить">
 	</form>
