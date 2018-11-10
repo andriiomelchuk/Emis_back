@@ -25,7 +25,7 @@ h6 {
 input,
 button,
 textarea {
-	font-size: 16px;
+	font-size: 1rem;
 }
 ul,
 ol {
@@ -46,7 +46,7 @@ body {
 }
 body {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 16px;
+	font-size: 1rem;
 	line-height: 1.4;
 	margin:0 auto;
 }
@@ -114,11 +114,11 @@ header{
 .aboutItem p, .leftStudy p{
 	font-family: 'Source Sans Pro', sans-serif;
 	margin:30px 0 0 0;
-	font-size:15.9px;
+	font-size:0.875rem;
 	font-weight:300;
 }
 .aboutItem h3{
-	font-size:23.9px;
+	font-size:1.12375rem;
 	font-weight:600;
 } 
 .aboutItem:hover h3{
@@ -153,7 +153,7 @@ h2{
 	color:#6a6a6a;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight:700;
-	font-size:46.8px;
+	font-size:2.25rem;
 }
 
 p{
@@ -162,7 +162,7 @@ p{
 	color:#999999;
 	text-align:center;
 	font-weight:400;
-	font-size:18.59px;
+	font-size:0.875rem;
 }
 
 .wings{
@@ -217,6 +217,7 @@ p{
 }
 
 .portfolioFilter a{
+	font-size:0.875rem;
 	font-weight:400;
 	text-decoration:none;
 	color:#999999;
@@ -241,7 +242,6 @@ p{
 a.current{
 	color:#e74c3c;
 	font-weight:700;
-	font-size:18.59px;
 }
 
 .workBlocks{
@@ -292,12 +292,38 @@ a.current{
 	height: 100%;
 	background: rgba(231, 76, 60, 0.8);
 	color: #fff;
-	padding: 15px;
+	padding:300px 15px 15px 15px;
 	-moz-transition: all 0.4s ease-in-out 0s;
 	-webkit-transition: all 0.4s ease-in-out 0s;
 	-ms-transition: all 0.4s ease-in-out 0s;
 	transition: all 0.4s ease-in-out 0s;
 }
+
+.block .cover h4, .block .cover p{
+	color:#ffffff;
+	text-align:left;
+}
+
+.block .cover h4{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size:1.5rem;
+	font-weight:600;
+	margin-top:32px;
+	text-transform:uppercase;
+}
+
+.portfolioSeparator{
+	width:44px;
+	height:4px;
+	background-color:#ffffff;
+}
+
+.block .cover p{
+	font-size:0.875rem;
+	margin:22px 0 0 0;
+	text-transform:lowercase;
+}
+
 
 .block:hover .cover, .block:active .cover{
 	opacity:1;
@@ -370,7 +396,7 @@ a.current{
 }
 
 .leftStudy h3{
-	font-size:23.9px;
+	font-size:1.125rem;
 	font-weight:600;
 	text-align:center;
 	color:#6a6a6a;
@@ -434,7 +460,7 @@ a.current{
 	text-decoration:none;
 	line-height:46px;
 	font-weight:600;
-	font-size:15.9px;
+	font-size:0.75rem;
 
 }
 
@@ -521,13 +547,13 @@ div.footer{
 
 .footerBlocks h3{
 	font-family: 'Source Sans Pro', sans-serif;
-	font-size:30px;
+	font-size:1.875rem;
 	font-weight:700;
 }
 
 .footerBlocks p{
 	font-family: 'Source Sans Pro', sans-serif;
-	font-size:23.9px;
+	font-size:1.125rem;
 	font-weight:400;
 }
 
@@ -547,11 +573,35 @@ div.footer{
 	height:auto;
 }
 
+button.slick-arrow{
+	display:none !important;
+}
 
 /*Media queries*/
 @media only screen and (min-width: 319px) and (max-width: 480px) {
 	.aboutItem, .block{
 		width:100%;
+	}
+	.leftStudy p{
+		margin:0;
+	}
+	.button{
+		margin: 20px auto;
+	}
+	.leftStudy h3{
+		height:58px;
+		margin-bottom:0;
+	}
+	.carIcon{
+		margin: 30px auto 25px auto;
+	}
+	.footerBlocks h3{
+		margin-top:5px;
+		font-size:0.75rem;
+	}
+	.footerBlocks p{
+		margin:0;
+		font-size:0.4rem;
 	}
 }
 
@@ -598,93 +648,63 @@ div.footer{
 @media only screen and (max-width: 768px) {
 
 	.portfolio{
-		margin-top:50px;
+		margin-top:100px;
 	}
 	h2{
-		font-size:30px;
+		font-size:1.875rem;
 	}
 	
 	p{
-		font-size:14px;
+		font-size:0.875rem;
 		margin-top:15px;
 	}
 	.portfolioFilter{
 		margin:40px 0px;
 	}
 	.studies{
-		margin:75px 0;
+		margin:100px 0 75px 0;
+	}
+	.studies p{
+		padding:0 10px;
+	}
+	
+	.leftStudy p{
+		padding:0;
 	}
 	.rightStudy{
 		display:none;
 	}
-	
-	.leftStudy{
-		width:100%;
-		position:relative;
-	}
-
-}
-
-/*
-@media only screen and (min-width: 481px) and (max-width: 600px) {
-	.aboutItem, .block{
-		width:100%;
-	}
-}
-@media only screen and (min-width: 601px) and (max-width: 768px) {
-	.aboutItem, .block{
-		width:50%;
-	}
-	
-}
-@media only screen and (max-width: 768px) {
-
-	div.block.isotope-item{
-		transform:translate3d(0);
-	}
-	.portfolio{
-		margin-top:50px;
-	}
-	h2{
-		font-size:30px;
-	}
-	
-	p{
-		font-size:14px;
-		margin-top:15px;
-	}
-	.portfolioFilter{
-		margin-top:40px;
-	}
-	.studies{
-		margin:75px 0;
-	}
-	.rightStudy{
-		display:none;
-	}
-	
-	.leftStudy{
-		width:100%;
-		position:relative;
-	}
-	div.portfolioContainer{
-		width:100%;
-	}
-}
-
-@media only screen and (max-width:1172px) {
 	.studyContainer{
 		width:100%;
 	}
-	div.block.isotope-item{
-		transform:translate3d(0);
+	.leftStudy{
+		width:90%;
+		max-width:665px;
+		margin:0 auto;
+		position:relative;
+		-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+		-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+		box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+		top:0;
+		padding:10px 20px 10px 20px;
+		height:auto;
 	}
-}
-@media only screen and (min-width: 992px) {
-	
-}
-@media only screen and (min-width: 1200px) {
-	
-} 
+	footer{
+		margin-top:0;
+		height:auto;
+	}
+	footer h3{
+		margin-top:5px;
+		font-size:1rem;
+	}
+	footer p{
+		margin:0;
+	}
+	.footerImg{
+		width:50%;
+	}
+	.footerBlocks{
+		margin-top:3%;
+	}
 
-*/
+}
